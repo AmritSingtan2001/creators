@@ -1,0 +1,6 @@
+<form method="post">
+    {% csrf_token %}
+        {{fm.as_p}}
+    <input type="submit" name="submit"  value="SINGIN">
+</form>
+<button><a href="{% url 'index' %}">SINGUP</a></button>

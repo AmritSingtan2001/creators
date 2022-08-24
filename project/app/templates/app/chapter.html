@@ -1,0 +1,14 @@
+<form method="post">
+    {% csrf_token %}
+    Subject:
+    <select name="subjectname">
+    {%for sub in data%}
+       <option value="{{sub.id}}">
+            {{sub.title}}
+        </option> 
+    {%endfor%}
+    </select>
+    {{fm.as_p}}
+    <input type="submit" name="submit" value="submit">
+</form>
+

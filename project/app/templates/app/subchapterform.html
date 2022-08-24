@@ -1,0 +1,13 @@
+<form method="post">
+    {% csrf_token %}
+    Choose Chapter: 
+    <select name = 'chapter'>
+        {% for iteam in chapter %}
+        <option value="{{iteam.id}}" >
+            {{iteam.chaptername}}
+        </option>
+        {% endfor %}
+    </select>
+    {{fm.as_p}}
+    <input type="submit" name="submit" value="submit">
+</form>
